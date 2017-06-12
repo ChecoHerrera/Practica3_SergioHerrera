@@ -1,3 +1,5 @@
-<h1>
-  {{title}}
-</h1>
+<div class="main">
+    <app-header></app-header>
+    <app-new-dish-form [categories]='categories' (sendDish)='receivedDish($event)'></app-new-dish-form>
+    <app-categories [categories]='categories'></app-categories>
+</div>

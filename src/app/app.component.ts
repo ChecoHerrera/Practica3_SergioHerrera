@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Category } from './models/Category';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  categories = [new Category('Breakfast'), new Category('Lunch'), new Category('Drinkct')];
+
+  receivedDish(pdish) {
+    for (var i = 0; i < this.categories.length; i++) {
+
+      if (this.categories[i].getName() === pdish.getCatName()) {
+
+        this.categories[i].dishes.push(pdish);
+
+
+      }
+
+    }
+
+  }
+
 }

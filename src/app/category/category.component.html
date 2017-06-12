@@ -1,0 +1,16 @@
+<p>
+  {{categoria.name}}
+</p>
+
+<div *ngFor='let dishes of categoria.getDishes()'>
+  <ul>
+    <li>
+      {{dishes.name}}
+    </li>
+    <li>
+      {{dishes.prace}}
+    </li>
+    <li>{{dishes.description}}
+    </li>
+  </ul>
+</div>

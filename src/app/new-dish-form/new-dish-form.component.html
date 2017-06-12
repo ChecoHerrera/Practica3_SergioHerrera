@@ -1,0 +1,19 @@
+<div class="dishes">
+  <h1>
+    New Dish
+  </h1>
+  <label for="name">Name</label>
+  <input type="text" id="name" (input)='onNameEnter($event)' />
+  <label for="price">Price</label>
+  <input type="text" id="price" (input)='onPriceEnter($event)' />
+  <label for="description">Description</label>
+  <input type="text" id="description" (input)="onDescriptionEnter($event)" />
+  <label for="category">Category</label>
+  <select (change)='onCategorySelect($event)'>
+    <option disabled>--Select Option--</option>
+  <option *ngFor='let category of categories'>
+    {{category.name}}
+  </option>
+</select>
+  <input type="submit" value="Send" (click)="onAddDish()" />
+</div>
